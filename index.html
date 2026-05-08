@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <link
+      rel="icon"
+      href="https://shoneal.github.io/nba-stats/images/icons/favicon.png"
+      type="image/x-icon"
+      sizes="any"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://shoneal.github.io/nba-stats/images/icons/icon-60x60.jpg"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://shoneal.github.io/nba-stats/images/icons/icon-72x72.jpg"
+      sizes="72x72"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://shoneal.github.io/nba-stats/images/icons/icon-114x114.jpg"
+      sizes="114x114"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://shoneal.github.io/nba-stats/images/icons/icon-144x144.jpg"
+      sizes="144x144"
+    />
+    <title>NBA Stats</title>
+    <meta name="description" content="NBA Player Stats, 2025-26 season" />
+    <meta name="application-name" content="Yahoo Sports" />
+    <meta property="og:title" content="NBA Stats" />
+    <meta
+      property="og:description"
+      content="NBA Player Stats, 2025-26 season"
+    />
+    <meta property="og:url" content="https://shoneal.github.io/nba-stats/" />
+    <meta property="og:site_name" content="Yahoo Sports" />
+    <meta
+      property="og:image"
+      content="https://shoneal.github.io/nba-stats/images/social_share_yahoo_sports-1200x630.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="NBA Stats" />
+    <meta
+      name="twitter:description"
+      content="NBA Player Stats, 2025-26 season"
+    />
+    <meta
+      name="twitter:image"
+      content="https://shoneal.github.io/nba-stats/images/social_share_yahoo_sports-1200x630.jpg"
+    />
+    <meta name="twitter:image:width" content="1200" />
+    <meta name="twitter:image:height" content="630" />
+    <link
+      rel="icon"
+      href="https://shoneal.github.io/nba-stats/images/icons/favicon.ico"
+      type="image/x-icon"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="preload"
+      href="./fonts/YahooSans-VF-Web.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/YahooSansCondensed-VF-Web.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <script type="module" src="./scripts/players.js"></script>
+    <script type="module" src="./scripts/result-and-place.js"></script>
+    <script type="module" src="./scripts/club-abbreviations.js"></script>
+    <script type="module" src="./scripts/script.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        aria-label="Yahoo Sports"
+        viewBox="0 0 137 20"
+      >
+        <path
+          d="M20.744 4.868v1.03c-.593-.769-1.688-1.294-2.962-1.294-3.003 0-5.241 2.652-5.241 5.767 0 3.114 2.215 5.766 5.241 5.766 1.271 0 2.369-.504 2.962-1.316v1.03h3.75V4.868zM25.787 0v15.854h3.88V9.999c0-1.14.548-1.821 1.425-1.821s1.338.593 1.338 1.688v5.985h3.881V8.944c0-2.675-1.447-4.342-3.772-4.342-1.251 0-2.216.482-2.894 1.338V0h-3.86zm35.5 10.37c0 3.29-2.522 5.768-5.877 5.768s-5.878-2.48-5.878-5.767 2.522-5.767 5.878-5.767c3.355 0 5.877 2.479 5.877 5.767m-12.41 0c0 3.29-2.522 5.768-5.878 5.768-3.355 0-5.877-2.48-5.877-5.767S39.644 4.604 43 4.604s5.878 2.479 5.878 5.767M0 4.869 4.692 15.94l-1.688 3.991h4.122l6.249-15.064H9.273L6.73 11.315 4.207 4.868zm18.571 7.76c-1.293 0-2.28-.986-2.28-2.257s.987-2.258 2.28-2.258c1.294 0 2.258.987 2.258 2.258a2.23 2.23 0 0 1-2.258 2.258m26.619-2.257c0-1.228-.922-2.216-2.193-2.216s-2.193.988-2.193 2.216.922 2.215 2.193 2.215 2.193-.987 2.193-2.215m12.41 0c0-1.228-.922-2.216-2.193-2.216s-2.192.988-2.192 2.216.921 2.215 2.192 2.215 2.193-.987 2.193-2.215m4.167 3.157c0 1.381 1.075 2.522 2.521 2.522a2.615 2.615 0 0 0 2.61-2.61c0-1.426-1.075-2.522-2.522-2.522s-2.61 1.206-2.61 2.61M67.295 0l-4.122 9.956h4.604L71.899 0z"
+        />
+        <path
+          d="M116.998 4.663a1.9 1.9 0 0 0-.595-.088c-1.408 0-2.42.703-3.012 1.958V4.838h-3.96v11h3.982v-4.005c0-2.046.947-3.19 2.619-3.19.329 0 .682.044.969.152V4.66zm19.777 7.655c0-1.783-1.21-2.75-3.653-3.432l-.637-.176c-.902-.241-1.253-.33-1.253-.595 0-.309.241-.462.836-.462 1.122 0 2.199.374 3.321.924l1.233-2.882c-1.519-.749-2.993-1.145-4.554-1.145-2.837 0-4.773 1.43-4.773 3.74 0 1.959 1.253 2.906 3.741 3.476l.572.133c.836.198 1.21.308 1.21.615 0 .374-.374.484-.946.484-1.233 0-2.574-.44-3.674-1.057l-1.408 2.86c1.321.859 3.168 1.341 5.039 1.341 2.905 0 4.951-1.386 4.951-3.829zM86.968 19.93v-5.257c.683.946 1.87 1.473 3.191 1.473 2.993 0 5.17-2.573 5.17-5.807s-2.157-5.807-5.17-5.807c-1.32 0-2.486.55-3.191 1.519V4.84h-4.005v15.091zm-.11-9.59c0-1.254.989-2.245 2.267-2.245 1.277 0 2.267.989 2.267 2.244s-.99 2.245-2.267 2.245c-1.278 0-2.267-.99-2.267-2.245m15.465-5.808c-3.454 0-6.028 2.508-6.028 5.807s2.574 5.807 6.028 5.807c3.455 0 6.006-2.508 6.006-5.807s-2.573-5.807-6.006-5.807m2.177 5.807c0 1.21-.969 2.177-2.177 2.177a2.17 2.17 0 0 1-2.176-2.177 2.17 2.17 0 0 1 2.176-2.177 2.17 2.17 0 0 1 2.177 2.177m14.959-8.91v3.41h-1.474v3.233h1.474v3.917c0 2.618 1.539 4.135 4.07 4.135 1.145 0 2.046-.22 2.508-.397V12.34a4 4 0 0 1-1.165.199c-.924 0-1.408-.417-1.408-1.497v-2.97h2.573V4.838h-2.573v-3.41zm-37.575 10.89c0-1.783-1.21-2.75-3.653-3.432l-.638-.176c-.901-.241-1.253-.33-1.253-.595 0-.309.242-.462.836-.462 1.123 0 2.2.374 3.322.924l1.233-2.882c-1.52-.749-2.993-1.145-4.555-1.145-2.837 0-4.773 1.43-4.773 3.74 0 1.959 1.253 2.906 3.741 3.476l.573.133c.836.198 1.21.308 1.21.615 0 .374-.374.484-.947.484-1.232 0-2.573-.44-3.673-1.057l-1.408 2.86c1.32.859 3.168 1.341 5.039 1.341 2.904 0 4.95-1.386 4.95-3.829z"
+        />
+      </svg>
+      <a href="https://shoneal.github.io/nba-archive/">Archive</a>
+    </header>
+    <main class="main">
+      <h1>NBA Stats</h1>
+      <div class="table_output">
+        <button
+          class="table_output_button is_average table_output_button-is_active"
+        >
+          Averages
+        </button>
+        <button class="table_output_button is_total">Totals</button>
+      </div>
+      <div class="filters">
+        <div class="search">
+          <svg
+            class="search_icon"
+            width="16"
+            height="16"
+            data-icon="search"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M9 3a6 6 0 1 0 0 12A6 6 0 0 0 9 3m13.713 19.713a.992.992 0 0 1-1.404 0l-7.404-7.404A7.959 7.959 0 0 1 9 17a8 8 0 1 1 8-8c0 1.85-.634 3.55-1.69 4.905l7.403 7.404a.987.987 0 0 1 0 1.403"
+            />
+          </svg>
+          <input class="search_input" id="input" type="text" />
+          <button class="search_clear">
+            <svg
+              width="16"
+              height="16"
+              data-icon="decline-fill"
+              viewBox="0 0 48 48"
+            >
+              <path
+                d="M24 1C11.3 1 1 11.3 1 24s10.3 23 23 23 23-10.3 23-23S36.7 1 24 1zm9.8 32.8c-.9.9-2.2.9-3.1 0L24 27l-6.8 6.8c-.9.9-2.2.9-3.1 0s-.9-2.2 0-3.1l6.8-6.8-6.7-6.7c-.9-.9-.9-2.2 0-3.1.9-.9 2.2-.9 3.1 0l6.7 6.7 6.7-6.7c.9-.9 2.2-.9 3.1 0 .9.9.9 2.2 0 3.1l-6.7 6.7 6.7 6.8c.9.9.9 2.3 0 3.1z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="selections">
+          <div class="filter_teams filter">
+            <div class="filter_header">
+              <p class="filter_title"></p>
+              <svg
+                width="20"
+                height="20"
+                data-icon="caret-down"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  d="m24.21 33.173 12.727-12.728c.78-.78.78-2.048 0-2.828a2.001 2.001 0 0 0-2.828 0l-9.9 9.9-9.9-9.9a2 2 0 0 0-2.827 2.828L24.21 33.173z"
+                />
+              </svg>
+            </div>
+            <select class="select_teams select">
+              <option value="NBA" selected>NBA</option>
+            </select>
+          </div>
+          <div class="filter_positions filter">
+            <div class="filter_header">
+              <p class="filter_title"></p>
+              <svg
+                width="20"
+                height="20"
+                data-icon="caret-down"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  d="m24.21 33.173 12.727-12.728c.78-.78.78-2.048 0-2.828a2.001 2.001 0 0 0-2.828 0l-9.9 9.9-9.9-9.9a2 2 0 0 0-2.827 2.828L24.21 33.173z"
+                />
+              </svg>
+            </div>
+            <select class="select_positions select">
+              <option value="ALL" selected>ALL</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="table-wrapper">
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="2">Fantasy</th>
+              <th colspan="3">Games</th>
+              <th colspan="2">Field Goals & FT</th>
+              <th colspan="2">Three Points</th>
+              <th colspan="8">Misc</th>
+            </tr>
+            <tr class="second_line">
+              <th title="Player">Player</th>
+            </tr>
+          </thead>
+          <tbody class="table_body">
+            <tr class="loading-row">
+              <td colspan="17">
+                <div></div>
+              </td>
+            </tr>
+            <tr class="loading-row">
+              <td colspan="17">
+                <div></div>
+              </td>
+            </tr>
+            <tr class="loading-row">
+              <td colspan="17">
+                <div></div>
+              </td>
+            </tr>
+            <tr class="loading-row">
+              <td colspan="17">
+                <div></div>
+              </td>
+            </tr>
+            <tr class="loading-row">
+              <td colspan="17">
+                <div></div>
+              </td>
+            </tr>
+            <tr class="loading-row">
+              <td colspan="17">
+                <div></div>
+              </td>
+            </tr>
+            <tr class="loading-row">
+              <td colspan="17">
+                <div></div>
+              </td>
+            </tr>
+            <tr class="loading-row">
+              <td colspan="17">
+                <div></div>
+              </td>
+            </tr>
+            <tr class="loading-row">
+              <td colspan="17">
+                <div></div>
+              </td>
+            </tr>
+            <tr class="loading-row">
+              <td colspan="17">
+                <div></div>
+              </td>
+            </tr>
+            <tr class="loading-row">
+              <td colspan="17">
+                <div></div>
+              </td>
+            </tr>
+            <tr class="loading-row">
+              <td colspan="17">
+                <div></div>
+              </td>
+            </tr>
+            <tr class="loading-row">
+              <td colspan="17">
+                <div></div>
+              </td>
+            </tr>
+            <tr class="loading-row">
+              <td colspan="17">
+                <div></div>
+              </td>
+            </tr>
+            <tr class="loading-row">
+              <td colspan="17">
+                <div></div>
+              </td>
+            </tr>
+            <tr class="loading-row">
+              <td colspan="17">
+                <div></div>
+              </td>
+            </tr>
+            <tr class="loading-row">
+              <td class="last-loader-td" colspan="17">
+                <div></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="counting_rows"></p>
+    </main>
+
+    <template id="player_row">
+      <tr class="table_row">
+        <td>
+          <div class="player_head">
+            <div class="player_photo_wrapper">
+              <img class="player_photo" src="" alt="" />
+            </div>
+            <div class="player_head_right">
+              <p class="player_name">
+                <span class="player_firstName"></span>
+                <span class="player_lastName"></span>
+              </p>
+              <p class="player_head_down">
+                <span class="player_club"></span> -
+                <span class="player_position"></span>
+              </p>
+            </div>
+          </div>
+        </td>
+        <td class="player_rank"></td>
+        <td class="player_games_previous"></td>
+        <td class="player_games"></td>
+        <td class="player_minutes"></td>
+        <td class="player_fg"></td>
+        <td class="player_ft"></td>
+        <td class="player_3pm"></td>
+        <td class="player_3p"></td>
+        <td class="player_pts"></td>
+        <td class="player_reb"></td>
+        <td class="player_ast"></td>
+        <td class="player_stl"></td>
+        <td class="player_blk"></td>
+        <td class="player_to"></td>
+        <td class="player_dd"></td>
+        <td class="player_td"></td>
+      </tr>
+    </template>
+  </body>
+</html>

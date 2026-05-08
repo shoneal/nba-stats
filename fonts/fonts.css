@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "YahooSans VF";
+  src: url(./YahooSans-VF-Web.woff2) format("woff2");
+  font-weight: 200 900;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "YahooSansCond VF";
+  src: url(./YahooSansCondensed-VF-Web.woff2) format("woff2");
+  font-weight: 300 900;
+  font-display: block;
+}
