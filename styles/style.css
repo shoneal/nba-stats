@@ -60,35 +60,44 @@ svg {
 }
 
 body {
-  margin: 0 auto;
-  padding: 0 var(--main-padding);
+  margin: 0;
+  padding: 0;
   color: var(--main-color);
   font-family: "YahooSans VF", sans-serif;
   background-color: var(--main-background);
-  max-inline-size: 1440px;
 }
 
 header {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+}
+
+.header-wrapper {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
-  height: 4rem;
+  width: 100%;
+  max-width: 1312px;
 }
 
-header > svg {
+.header-wrapper > svg {
   height: 1.5rem;
 }
 
-header > svg path:first-child {
+.header-wrapper > svg path:first-child {
   fill: var(--brand-color);
 }
 
-header > svg path:last-child {
+.header-wrapper > svg path:last-child {
   fill: var(--main-color);
 }
 
-header > a {
+.header-wrapper > a {
   display: flex;
   align-items: center;
   height: 30px;
@@ -100,14 +109,16 @@ header > a {
   white-space: nowrap;
 }
 
-header > a:focus-visible {
+.header-wrapper > a:focus-visible {
   border-radius: 5px;
   outline: 4px solid rgb(96 1 210 / 50%);
   color: var(--brand-color);
 }
 
 main {
-  margin: calc(32px * 2) 0 32px;
+  margin: calc(32px * 2) auto 32px;
+  padding: 0 var(--main-padding);
+  max-inline-size: 1440px;
 }
 
 h1 {
@@ -478,7 +489,7 @@ thead th {
 }
 
 @media screen and (min-width: 768px) {
-  header > a:hover {
+  .header-wrapper > a:hover {
     color: var(--brand-color);
   }
 
