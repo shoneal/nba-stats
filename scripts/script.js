@@ -243,7 +243,7 @@ function updatePlayersTable() {
       valB = minB * 60 + secB;
     }
 
-    const isAscending = ["Rank", "A/T", "TO"].includes(sortBy);
+    const isAscending = ["Rank", "TO"].includes(sortBy);
     const primaryDiff = isAscending ? valA - valB : valB - valA;
     return primaryDiff !== 0 ? primaryDiff : a.Rank - b.Rank;
   });
