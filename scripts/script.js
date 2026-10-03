@@ -16,6 +16,7 @@ const statisticTitles = {
   Stl: "Steals",
   Blk: "Blocked Shots",
   TO: "Turnovers",
+  "A/T": "Assist/Turnover Ratio",
   DD: "Double-doubles",
   TD: "Triple-doubles",
 }; // Полные наименования аббревиатур статистики
@@ -29,6 +30,8 @@ function transformPlayerStats(players) {
   };
 
   const pct = (m, a) => (a > 0 ? +((m / a) * 100).toFixed(1) : 0);
+
+  const ratio = (m, a) => (a > 0 ? +(m / a).toFixed(2) : 0);
 
   const processStats = (stats) => {
     const G = stats[0];
@@ -48,6 +51,7 @@ function transformPlayerStats(players) {
         Stl: stats[11],
         Blk: stats[12],
         TO: stats[13],
+        "A/T": ratio(stats[10], stats[13]),
         DD: stats[14],
         TD: stats[15],
       },
@@ -64,6 +68,7 @@ function transformPlayerStats(players) {
         Stl: avg(stats[11]),
         Blk: avg(stats[12]),
         TO: avg(stats[13]),
+        "A/T": ratio(stats[10], stats[13]),
         DD: avg(stats[14]),
         TD: avg(stats[15]),
       },
@@ -238,7 +243,7 @@ function updatePlayersTable() {
       valB = minB * 60 + secB;
     }
 
-    const isAscending = ["Rank", "TO"].includes(sortBy);
+    const isAscending = ["Rank", "A/T", "TO"].includes(sortBy);
     const primaryDiff = isAscending ? valA - valB : valB - valA;
     return primaryDiff !== 0 ? primaryDiff : a.Rank - b.Rank;
   });
@@ -273,12 +278,18 @@ function updateNumbers(row) {
             : item[key] || 0;
 
     const fromAverages = isAveragesActive;
-    const showDecimal = statKeys.indexOf(key) >= boundaryIndex && key !== "3P%";
+    const showDecimal =
+      statKeys.indexOf(key) >= boundaryIndex && key !== "3P%" && key !== "A/T";
 
     if (key.includes("%")) {
       let numValue = parseFloat(value);
       if (numValue >= 1) numValue /= 100;
       cell.textContent = "." + numValue.toFixed(3).replace(/^0\./, "");
+    } else if (key.includes("/")) {
+      const numValue = parseFloat(value);
+      if (!isNaN(numValue)) {
+        cell.textContent = numValue.toFixed(2);
+      }
     } else if (typeof value === "number" || !isNaN(value)) {
       const formatted =
         fromAverages && showDecimal
@@ -394,7 +405,7 @@ async function updateTable() {
       loaderRow.classList.add("loading-row");
 
       const loaderCell = document.createElement("td");
-      loaderCell.setAttribute("colspan", "16");
+      loaderCell.setAttribute("colspan", "18");
 
       const loaderDiv = document.createElement("div");
       loaderCell.appendChild(loaderDiv);
@@ -548,7 +559,7 @@ function setupResponsiveTable() {
             statsRow.playerData = row.playerData;
           }
 
-          firstTd.colSpan = 15;
+          firstTd.colSpan = 17;
           firstTd.classList.add("table_cell-mobile-first");
           statsRow.classList.toggle(
             "table_row-is_active",
