@@ -426,6 +426,17 @@ export const players = {
         3,
       ],
     },
+    "Collin Murray-Boyles": {
+      firstName: "Collin",
+      lastName: "Murray-Boyles",
+      team: "Toronto Raptors",
+      positions: "PF,C",
+      "G Prev": 0,
+      Rank: 111,
+      stats: [
+        57, 1246, 198, 342, 71, 108, 17, 50, 484, 285, 106, 52, 53, 59, 4, 0,
+      ],
+    },
   },
   SF: {
     "Mikal Bridges": {
