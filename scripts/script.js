@@ -288,7 +288,7 @@ function updateNumbers(row) {
     } else if (key.includes("/")) {
       const numValue = parseFloat(value);
       if (!isNaN(numValue)) {
-        cell.textContent = numValue.toFixed(2);
+        cell.textContent = numValue.toFixed(1);
       }
     } else if (typeof value === "number" || !isNaN(value)) {
       const formatted =

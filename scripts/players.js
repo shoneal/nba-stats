@@ -623,6 +623,18 @@ export const players = {
         73, 1896, 303, 577, 109, 191, 6, 24, 721, 418, 228, 146, 69, 110, 3, 0,
       ],
     },
+    "Andrew Wiggins": {
+      firstName: "Andrew",
+      lastName: "Wiggins",
+      team: "Miami Heat",
+      positions: "SG,SF,PF",
+      "G Prev": 60,
+      Rank: 95,
+      stats: [
+        68, 2063, 390, 821, 127, 162, 138, 333, 1045, 329, 182, 76, 69, 103, 2,
+        0,
+      ],
+    },
   },
   C: {
     "Derik Queen": {
